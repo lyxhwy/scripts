@@ -1,6 +1,7 @@
 const $=$substore;
 const sim=$arguments["sim"]
 const flag=$arguments["flag"]
+const numone=$arguments["one"]
 const batch_size=$arguments["batch"]?$arguments["batch"]:100;
 const keynames=$arguments.name?decodeURI($arguments.name):"";
 const timeout=$arguments["timeout"]?$arguments["timeout"]:1e3;
