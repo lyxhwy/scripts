@@ -2,7 +2,10 @@ const $=$substore;
 const sim=$arguments["sim"]
 const flag=$arguments["flag"]
 const numone=$arguments["one"]
-const batch_size=$arguments["batch"]?$arguments["batch"]:100;
+const citys=$arguments["city"]
+const{isLoon,isSurge,isQX}=$substore.env;const batch_size=$arguments["batch"]?$arguments["batch"]:100;const keynames=$arguments.name?decodeURI($arguments.name):"";
+const target=isLoon?"Loon":isSurge?"Surge":isQX?"QX":undefined;async function operator(proxies){const support=isLoon||isSurge;if(!support){$.error(`No Loon or Surge`);
+$notify("不支持当前运行环境","本脚本仅支持Loon和Surge","");
 const keynames=$arguments.name?decodeURI($arguments.name):"";
 const timeout=$arguments["timeout"]?$arguments["timeout"]:1e3;
 return proxies}const startTime=new Date;
